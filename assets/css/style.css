@@ -112,10 +112,100 @@ li {
   Header styling starts here
 =================================*/
 
+header{
+  margin-top: 21px;
+  position: relative;
+  z-index: 1;
+  /* background-color: #5C5D5F; */
+}
 
+.social-links {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 8%;
+}
 
+.lang { 
+  padding-top: 4px;
+  padding-right: 1%;
+  font-size: 13px; 
+}
 
+.lang a:first-child::after {
+  content: '\007C';
+  padding-left: 5px;
+}
 
+.facebook,
+.twitter,
+.pintrest,
+.instagram,
+.t,
+.youtube {
+  text-indent: -9999px;
+}
+
+.facebook::after { content: "\f39e"; }
+.twitter::after { content: "\f099"; }
+.pintrest::after { content: "\f231"; }
+.instagram::after { content: "\f16d"; }
+.t::after { content: "\54"; }
+.youtube::after { content: "\f167"; }
+
+.facebook::after,
+.twitter::after,
+.pintrest::after,
+.instagram::after,
+.t::after,
+.youtube::after {
+  color: #FFF;
+  padding: 5px;
+  background-color: #6B6B6D;
+  font-family: "fontAwesome";
+  font-size: 10px;
+  float: right;
+  text-indent: 0;
+}
+
+.input-container {
+  position: relative;
+}
+
+.search {
+  background-color: #6D6E72;
+  border: none;
+}
+
+.input-container img {
+  position: absolute;
+  width: 5%;
+  top: 5px;
+  right: 2px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 31px;
+}
+
+.logo:hover { 
+  color: aqua;
+  transition: .5s ease-in;
+}
+
+nav{
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links { padding: 17px 0 26px;}
+
+.nav-links li a { color: #FFF; }
+.nav-links li a:hover { 
+  color: aqua;
+  transition: .5s ease-in;
+}
 
 /*=================================
   Header styling ends here
@@ -125,7 +215,10 @@ li {
   main styling starts here
 =================================*/
 
-
+.banner {
+  position: absolute;
+  top: 0;
+}
 
 
 
