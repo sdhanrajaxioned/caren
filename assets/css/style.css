@@ -114,8 +114,6 @@ li {
 
 header{
   margin-top: 21px;
-  position: relative;
-  z-index: 1;
   /* background-color: #5C5D5F; */
 }
 
@@ -215,11 +213,14 @@ nav{
   main styling starts here
 =================================*/
 
-.banner {
-  position: absolute;
-  top: 0;
+
+.arrow-left,
+.arrow-right {
+  text-indent: -9999px;
 }
 
+.banner-img { display: none; }
+.banner-img:first-child { display: block ;}
 
 
 
