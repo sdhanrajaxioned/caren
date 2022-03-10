@@ -133,7 +133,7 @@ header{
 }
 
 .lang a { color: #FFF; }
-.lang a:hover{ color: aqua;}
+.lang a:hover{ color: #B4CFB0;}
 .lang a:first-child::after {
   content: '\007C';
   padding-left: 5px;
@@ -177,7 +177,7 @@ header{
 .t:hover::after,
 .youtube:hover::after {
   color: #6B6B6D;
-  background-color: #000;
+  background-color: #B4CFB0;
 }
 
 .input-container { position: relative; }
@@ -200,7 +200,7 @@ header{
 }
 
 .logo:hover { 
-  color: aqua;
+  color: #B4CFB0;
   transition: .5s ease-in;
 }
 
@@ -210,9 +210,10 @@ nav{
   justify-content: space-between;
 }
 
-.nav-links { padding: 17px 0 26px;}
+.nav-links { padding: 17px 0 26px; }
 
-.nav-links li a { 
+.nav-links li a,
+.footer-links li a{ 
   padding: 0 2px;
   font-size: 14px;
   color: #FFF; 
@@ -220,8 +221,9 @@ nav{
 
 .home { margin-right: 13px; }
 
-.nav-links li a:hover { 
-  color: aqua;
+.nav-links li a:hover,
+.footer-links li a:hover { 
+  color: #B4CFB0;
   transition: .5s ease-in;
 }
 
@@ -306,7 +308,7 @@ nav{
 
 /* Image-galler styling ends here */
 .gallery {
-  margin: 23px 11.7% 69px;
+  margin: 23px 11% 69px;
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
@@ -363,12 +365,27 @@ nav{
 /*=================================
   footer styling starts here
 =================================*/ 
+footer {
+  background-color: #000; 
+}
 
+.footer-social-links li a { padding: 0 2px;}
 
+.footer-main { 
+  padding: 30px 8% 52px;
+  display: flex;
+  justify-content: space-between;
+}
 
+.footer-main p { color: #FFF; }
 
+.footer-social-links {
+  padding-right: 8%;
+  display: flex;
+  justify-content: flex-end;
+}
 
-
+/* .footer-links { display: flex; } */
 
  /*=================================
   footer styling ends here
