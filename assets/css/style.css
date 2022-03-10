@@ -113,8 +113,12 @@ li {
 =================================*/
 
 header{
-  margin-top: 21px;
-  /* background-color: #5C5D5F; */
+  width: 100%;
+  position: absolute;
+  padding-top: 21px;
+  z-index: 1;
+  background: rgb(8,8,8,0.7)
+
 }
 
 .social-links {
@@ -124,11 +128,12 @@ header{
 }
 
 .lang { 
-  padding-top: 4px;
-  padding-right: 1%;
-  font-size: 13px; 
+  padding: 4px 1% 0 0;
+  font-size: 13px;
 }
 
+.lang a { color: #FFF; }
+.lang a:hover{ color: aqua;}
 .lang a:first-child::after {
   content: '\007C';
   padding-left: 5px;
@@ -165,9 +170,7 @@ header{
   text-indent: 0;
 }
 
-.input-container {
-  position: relative;
-}
+.input-container { position: relative; }
 
 .search {
   background-color: #6D6E72;
@@ -199,7 +202,11 @@ nav{
 
 .nav-links { padding: 17px 0 26px;}
 
-.nav-links li a { color: #FFF; }
+.nav-links li a { 
+  padding: 0 5px;
+  color: #FFF; 
+}
+
 .nav-links li a:hover { 
   color: aqua;
   transition: .5s ease-in;
@@ -212,18 +219,65 @@ nav{
 /*=================================
   main styling starts here
 =================================*/
+/* Banner styling starts here */
+.banner {position: relative;}
+.banner-img { display: none; }
+.banner-img:first-child { display: block ;}
 
+.image-slider{position: relative;}
 
 .arrow-left,
 .arrow-right {
   text-indent: -9999px;
 }
 
-.banner-img { display: none; }
-.banner-img:first-child { display: block ;}
+.arrow-left::after { 
+  content: "\f104"; 
+  position: absolute;
+  top: 347px;
+  left: 79px;
+}
 
+.arrow-right::after { 
+  content: "\f104"; 
+  position: absolute;
+  top:347px;
+  right: 79px;
 
+}
+.arrow-right::after { content: "\f105"; }
 
+.arrow-left::after, 
+.arrow-right::after {
+  font-family: "fontAwesome";
+  color: #FFF;
+  float:right;
+  font-size: 74px;
+  text-indent: 0;
+}
+
+.dots { 
+  position: absolute;
+  bottom: 58px;
+  left: 720px;
+}
+
+.dot {text-indent: -9999px;}
+
+.dot::after {
+  content: "\f192";
+  color: #FFF;
+  font-family: "fontAwesome";
+  float: right;
+  text-indent: 0;
+  font-size: 13px;
+}
+
+.dot.active::after { color: #000;}
+/* Banner styling ends here */
+
+/* Image-galler styling ends here */
+/* Image-gallery styling ends here */
 
 
 /*=================================
