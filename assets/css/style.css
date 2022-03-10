@@ -113,18 +113,23 @@ li {
 =================================*/
 
 header{
-  width: 100%;
-  position: absolute;
   padding-top: 21px;
+  width: 100%;
+  border-top: 10px solid #000;
+  position: absolute;
+  background: rgb(8,8,8,0.7);
   z-index: 1;
-  background: rgb(8,8,8,0.7)
+}
 
+.bg-black { 
+  background-color: #000; 
+  padding-bottom: 21px;
 }
 
 .social-links {
   display: flex;
   justify-content: flex-end;
-  padding-right: 8%;
+  padding-right: 8.4%;
 }
 
 .lang { 
@@ -144,7 +149,14 @@ header{
 .pintrest,
 .instagram,
 .t,
-.youtube {
+.youtube,
+.hamburger,
+.share-nodes,
+.search-icon,
+.dot,
+.arrow-left,
+.arrow-right,
+.quote {
   text-indent: -9999px;
 }
 
@@ -207,15 +219,18 @@ header{
 nav{
   padding: 0 8%;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
 }
 
-.nav-links { padding: 17px 0 26px; }
+.nav-links { 
+  padding: 17px 0 26px; 
+  margin-left: 25.5%;
+}
 
 .nav-links li a,
 .footer-links li a{ 
   padding: 0 2px;
-  font-size: 14px;
+  font-size: 15px;
   color: #FFF; 
 }
 
@@ -246,11 +261,6 @@ nav{
 
 .image-slider{ position: relative; }
 
-.arrow-left,
-.arrow-right {
-  text-indent: -9999px;
-}
-
 .arrow-left::after { 
   content: "\f104"; 
   position: absolute;
@@ -263,7 +273,6 @@ nav{
   position: absolute;
   top:347px;
   right: 79px;
-
 }
 
 .arrow-left::after, 
@@ -286,8 +295,6 @@ nav{
   bottom: 58px;
   left: 720px;
 }
-
-.dot {text-indent: -9999px;}
 
 .dot::after {
   content: "\f192";
@@ -338,11 +345,7 @@ nav{
 }
 
 .gallery li:nth-child(3){ position: relative }
-
-.quote {
-  position: absolute;
-  text-indent: -9999px;
-}
+.quote { position: absolute; }
 
 .quote::after {
   content: "\f10d";
@@ -366,6 +369,7 @@ nav{
   footer styling starts here
 =================================*/ 
 footer {
+  padding-top: 32px;
   background-color: #000; 
 }
 
@@ -377,7 +381,10 @@ footer {
   justify-content: space-between;
 }
 
-.footer-main p { color: #FFF; }
+.footer-main p { 
+  color: #FFF; 
+  font-size: 10px;
+}
 
 .footer-social-links {
   padding-right: 8%;
@@ -393,8 +400,82 @@ footer {
 
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 767px) {
+  header { padding-top: 0; }
 
+  .links,
+  .nav-links {display: none;}
 
+  .social-links { padding-right: 0; }
 
-}  
+  .lang { 
+    padding: 4px 1% 0 0;
+    font-size: 12px;
+  }
+
+  nav {
+    padding: 0 2% 30px;
+    justify-content: space-between;
+  }
+
+  .icons { padding-top: 9px; }
+  .icons a { padding: 0 14px}
+
+  .search-icon::after,
+  .hamburger::after,
+  .share-nodes::after{
+    color: #FFF;
+    font-family: "fontAwesome";
+    font-size: 18px;
+    float: right;
+    text-indent: 0;
+  }
+
+  .search-icon::after { content: "\f002";}
+  .hamburger::after { content: "\f0c9"; }
+  .share-nodes::after { content: "\f1e0"; }
+  
+  .arrow-left::after { 
+    top: 147px;
+    left: 20px;
+    font-size: 42px;
+  }
+  
+  .arrow-right::after { 
+    top:147px;
+    right: 20px;
+    font-size: 42px;
+  }
+
+  .dots { 
+    bottom: 25px;
+    left: 258px;
+  }
+
+  .gallery { margin: 10px 11% 28px; }
+  .dot::after { font-size: 17px; }
+  .gallery li:last-child {display: none;}
+  .gallery li:nth-child(5){ margin-top: 277px; }
+  .gallery li:nth-child(2){ position: relative; }
+
+  .footer-social-links,
+  .footer-links{  display: none
+  }
+
+  .footer-main { 
+    padding: 7px 0 45px;
+    flex-direction:column;
+    align-items: center;
+  }
+
+  .see {text-indent: -9999px}
+
+  .see::after {
+    position: absolute;
+    top: 60px;
+    left: 220px;
+    color: #FFF;
+    text-indent: 0;
+    float: right;
+  }
+}
