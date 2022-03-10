@@ -170,6 +170,16 @@ header{
   text-indent: 0;
 }
 
+.facebook:hover::after,
+.twitter:hover::after,
+.pintrest:hover::after,
+.instagram:hover::after,
+.t:hover::after,
+.youtube:hover::after {
+  color: #6B6B6D;
+  background-color: #000;
+}
+
 .input-container { position: relative; }
 
 .search {
@@ -203,13 +213,21 @@ nav{
 .nav-links { padding: 17px 0 26px;}
 
 .nav-links li a { 
-  padding: 0 5px;
+  padding: 0 2px;
+  font-size: 14px;
   color: #FFF; 
 }
+
+.home { margin-right: 13px; }
 
 .nav-links li a:hover { 
   color: aqua;
   transition: .5s ease-in;
+}
+
+.vertical::after {
+  content: "\007C";
+  padding-left: 8px;
 }
 
 /*=================================
@@ -224,7 +242,7 @@ nav{
 .banner-img { display: none; }
 .banner-img:first-child { display: block ;}
 
-.image-slider{position: relative;}
+.image-slider{ position: relative; }
 
 .arrow-left,
 .arrow-right {
@@ -239,13 +257,12 @@ nav{
 }
 
 .arrow-right::after { 
-  content: "\f104"; 
+  content: "\f105"; 
   position: absolute;
   top:347px;
   right: 79px;
 
 }
-.arrow-right::after { content: "\f105"; }
 
 .arrow-left::after, 
 .arrow-right::after {
@@ -254,6 +271,12 @@ nav{
   float:right;
   font-size: 74px;
   text-indent: 0;
+}
+
+.arrow-left:hover::after,
+.arrow-right:hover::after {
+  color: #000;
+  transition: 0.5s ease-in;
 }
 
 .dots { 
@@ -273,10 +296,63 @@ nav{
   font-size: 13px;
 }
 
+.dot:hover::after {
+  color: #000;
+  transition: .5s ease-in;
+}
+
 .dot.active::after { color: #000;}
 /* Banner styling ends here */
 
 /* Image-galler styling ends here */
+.gallery {
+  margin: 23px 11.7% 69px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.gallery li:nth-child(2){ position: relative;}
+
+.see {
+  position: absolute;
+  top: 150px;
+  right: 250px;
+  color: #9B2B74;
+  font-size: 23px;
+}
+
+.see:hover,
+.see:hover::after  { 
+  color: #000;
+  transition: .5s ease-in;
+}
+
+.see::after {
+  content: "\f101";
+  color: #A62863;
+  font-family: "fontAwesome";
+  font-size: 20px;
+}
+
+.gallery li:nth-child(3){ position: relative }
+
+.quote {
+  position: absolute;
+  text-indent: -9999px;
+}
+
+.quote::after {
+  content: "\f10d";
+  position: absolute;
+  top: 50px;
+  right: 258px;
+  color: #FFF;
+  float: right;
+  font-family: "fontAwesome";
+  font-size: 20px;
+  text-indent: 0;
+}
 /* Image-gallery styling ends here */
 
 
