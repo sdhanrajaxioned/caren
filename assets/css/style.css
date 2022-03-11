@@ -353,7 +353,7 @@ header{
 }
 
 
-.gallery > *:nth-child(6){ flex-basis: 97.6%; }
+.gallery > *:nth-child(6){ flex-basis: 98.5%; }
 .gallery > li:first-child img { height: 100%;}
 .gallery li:nth-child(2){ position: relative;}
 
@@ -435,7 +435,7 @@ footer {
 
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 800px) {
   header { padding-top: 0; }
   .social-links {padding: 0 8% 0;}
   .logo  { font-size: 18px; }
@@ -581,7 +581,7 @@ footer {
 @media screen and (min-width: 320px) and (max-width: 360px) {
   .logo { font-size: 15px;}
   .icons a { padding: 0 2px}
-  
+
   .arrow-left::after,
   .arrow-right::after {
     top: 80px;
