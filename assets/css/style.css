@@ -269,7 +269,8 @@ header{
 }
 
 .vertical { border-right: 1px solid white;}
-.nav-links li a{ padding-right: 5px; }
+.nav-links li a,
+.footer-links li a{ padding-right: 5px; }
 .icons { display: none; }
 /*=================================
   Header styling ends here
@@ -438,6 +439,7 @@ footer {
 @media only screen and (max-width: 800px) {
   header { padding-top: 0; }
   .social-links {padding: 0 8% 0;}
+  .vertical { border-right: none}
   .input-container {display: none;}
   .logo  { font-size: 18px; }
   .navbar h1 {margin-right: auto;}
