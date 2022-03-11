@@ -154,7 +154,9 @@ header{
 .arrow-left,
 .arrow-right,
 .quote,
-.hamburger {
+.hamburger,
+.share-nodes,
+.search-icon {
   text-indent: -9999px;
 }
 
@@ -251,11 +253,14 @@ header{
 
 .nav-links li a,
 .footer-links li a{ 
-  font-size: 11px;
+  font-size: 10px;
   color: #FFF; 
 }
 
-.home { margin-right: 13px; }
+.home { 
+  vertical-align: middle;
+  width: 70%;
+}
 
 .nav-links li a:hover,
 .footer-links li a:hover { 
@@ -263,11 +268,8 @@ header{
   transition: .5s ease-in;
 }
 
-.vertical::after {
-  content: "\007C";
-  padding-left: 8px;
-}
-
+.vertical { border-right: 1px solid white;}
+.nav-links li a{ padding-right: 5px; }
 .icons { display: none; }
 /*=================================
   Header styling ends here
