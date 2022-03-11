@@ -132,7 +132,7 @@ header{
 }
 
 .lang { 
-  padding: 4px 1% 0 0;
+  padding: 2px 1.1% 0 0;
   font-size: 9px;
 }
 
@@ -152,7 +152,8 @@ header{
 .dot,
 .arrow-left,
 .arrow-right,
-.quote {
+.quote,
+.hamburger {
   text-indent: -9999px;
 }
 
@@ -194,7 +195,7 @@ header{
 	padding: 0;
 	cursor: pointer;
   position: absolute;
-  top: 2px;
+  top: 0;
   right: 0;
   text-indent: -9999px;
 }
@@ -204,19 +205,24 @@ header{
   padding: 3px;
   color: #FFF;
   font-family: "fontAwesome";
-  font-size: 10px;
+  font-size: 7px;
   float: right;
   text-indent: 0;
 }
 
 .input-container { 
+  width: 7.4%;
   margin-right: .5%;
   position: relative; 
 }
 
 .search {
+  width: 100%;
+  height: 12px;
+  padding: 0;
   background-color: #6D6E72;
   border: none;
+  vertical-align: top;
 }
 
 .input-container img {
@@ -242,10 +248,9 @@ header{
   padding: 8px 8% 15px;
 }
 
-
 .nav-links li a,
 .footer-links li a{ 
-  font-size: 10px;
+  font-size: 11px;
   color: #FFF; 
 }
 
@@ -438,27 +443,38 @@ footer {
 @media only screen and (max-width: 800px) {
   header { padding-top: 0; }
   .social-links {padding: 0 8% 0;}
-  .logo  { font-size: 18px; }
   .input-container {display: none;}
 
+
+  .logo  { font-size: 18px; }
+
+  .navbar{ justify-content: flex-end; }
+  .navbar h1 {margin-right: auto;}
   .links,
   .nav-links {display: none;}
 
   .social-links { padding-right: 0; }
 
   .lang { 
-    padding: 4px 1% 0 0;
+    padding: 4px 1.1% 1px 0;
     font-size: 12px;
   }
 
   .icons {display: block;}
+
+  .share-nodes,
+  .search-icon {
+    text-indent: -9999px;
+  }
+
 
   nav {
     padding: 8px 0 8px;
     justify-content: space-between;
   }
 
-  .icons a { padding: 0 14px}
+  .share-nodes,
+  .search-icon { padding-right: 15px;}
 
   .search-icon::after,
   .hamburger::after,
@@ -517,6 +533,7 @@ footer {
  
   .gallery { 
     flex-direction: column;
+    align-items: center;
     margin: 10px 11% 28px; 
   }
 
@@ -563,14 +580,12 @@ footer {
 @media screen and (max-width: 560px){
   .arrow-left::after,
   .arrow-right::after {
-    top: 140px;
+    top: 120px;
   }
 }
 
 @media screen and (max-width:480px) {
   .logo { font-size: 16px;}
-
-  .icons a { padding: 0 6px}
 
   .arrow-left::after,
   .arrow-right::after {
@@ -580,7 +595,14 @@ footer {
 
 @media screen and (min-width: 320px) and (max-width: 360px) {
   .logo { font-size: 15px;}
-  .icons a { padding: 0 2px}
+
+  .arrow-left::after,
+  .arrow-right::after {
+    top: 80px;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 420px) {
+  .logo { font-size: 15px;}
 
   .arrow-left::after,
   .arrow-right::after {
