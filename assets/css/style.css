@@ -121,12 +121,12 @@ header{
 }
 
 .bg-black { 
-  background-color: #000; 
   padding-bottom: 21px;
+  background-color: #000; 
 }
 
 .social-links {
-  padding:8px 8% 0;
+  padding: 8px 8% 0;
   display: flex;
   justify-content: flex-end;
 }
@@ -138,6 +138,7 @@ header{
 
 .lang a { color: #FFF; }
 .lang a:hover{ color: #B4CFB0;}
+
 .lang a:first-child::after {
   content: '\007C';
   padding-left: 5px;
@@ -170,8 +171,8 @@ header{
 .instagram::after,
 .t::after,
 .youtube::after {
-  color: #FFF;
   padding: 2px;
+  color: #FFF;
   background-color: #6B6B6D;
   font-family: "fontAwesome";
   font-size: 8px;
@@ -190,13 +191,13 @@ header{
 }
 
 .search-btn {
-  background: none;
-	border: none;
 	padding: 0;
-	cursor: pointer;
+	border: none;
+  background: none;
   position: absolute;
   top: 0;
   right: 0;
+	cursor: pointer;
   text-indent: -9999px;
 }
 
@@ -220,14 +221,14 @@ header{
   width: 100%;
   height: 12px;
   padding: 0;
-  background-color: #6D6E72;
   border: none;
+  background-color: #6D6E72;
   vertical-align: top;
 }
 
 .input-container img {
-  position: absolute;
   width: 5%;
+  position: absolute;
   top: 5px;
   right: 2px;
 }
@@ -243,9 +244,9 @@ header{
 }
 
 .navbar { 
+  padding: 8px 8% 15px;
   display: flex;
   justify-content: space-between;
-  padding: 8px 8% 15px;
 }
 
 .nav-links li a,
@@ -267,8 +268,7 @@ header{
   padding-left: 8px;
 }
 
-.icons { display: none;}
-
+.icons { display: none; }
 /*=================================
   Header styling ends here
 =================================*/  
@@ -277,13 +277,11 @@ header{
   main styling starts here
 =================================*/
 /* Banner styling starts here */
-.banner {position: relative;}
-.banner .wrapper {
-  width: 100%;
-}
+.banner { position: relative; }
+
+.banner .wrapper { width: 100%; }
 .banner-img { display: none; }
 .banner-img:first-child { display: block ;}
-
 .image-slider{ position: relative; }
 
 .arrow-left::after { 
@@ -339,7 +337,7 @@ header{
 .dot.active::after { color: #000;}
 /* Banner styling ends here */
 
-/* Image-galler styling ends here */
+/* Image-galler styling starts here */
 .gallery {
   margin: 23px 11% 69px;
   display: flex;
@@ -356,7 +354,6 @@ header{
 {
   flex-basis: 31.5%
 }
-
 
 .gallery > *:nth-child(6){ flex-basis: 98.5%; }
 .gallery > li:first-child img { height: 100%;}
@@ -399,8 +396,6 @@ header{
   text-indent: 0;
 }
 /* Image-gallery styling ends here */
-
-
 /*=================================
   main styling ends here
 =================================*/
@@ -422,6 +417,7 @@ footer {
 }
 
 .footer-main p { 
+  padding-top: 5px;
   color: #FFF; 
   font-size: 10px;
 }
@@ -431,9 +427,6 @@ footer {
   display: flex;
   justify-content: flex-end;
 }
-
-/* .footer-links { display: flex; } */
-
  /*=================================
   footer styling ends here
 =================================*/ 
@@ -444,15 +437,11 @@ footer {
   header { padding-top: 0; }
   .social-links {padding: 0 8% 0;}
   .input-container {display: none;}
-
-
   .logo  { font-size: 18px; }
-
   .navbar{ justify-content: flex-end; }
   .navbar h1 {margin-right: auto;}
   .links,
   .nav-links {display: none;}
-
   .social-links { padding-right: 0; }
 
   .lang { 
@@ -511,7 +500,6 @@ footer {
   }
   
   .nav-links{ padding: 10px 0; }
-
   .nav-links li a { padding: 5px 10px; }
 
   .arrow-left::after { 
@@ -532,9 +520,9 @@ footer {
   .gallery li:last-child {display: none;}
  
   .gallery { 
+    margin: 10px 11% 28px; 
     flex-direction: column;
     align-items: center;
-    margin: 10px 11% 28px; 
   }
 
   .gallery > *:nth-child(1) {width: 50%;}
@@ -547,7 +535,6 @@ footer {
     width: 50%;
   }
 
-  
   .footer-social-links,
   .footer-links{  display: none
   }
