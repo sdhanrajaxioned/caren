@@ -122,7 +122,6 @@ header{
 }
 
 header.active {
-  position: fixed;
   background-color: #FFF;
   transition: all .5s ease-in;
 }
@@ -249,16 +248,14 @@ header.active {
   font-size: 20px;
 }
 
-.logo.active {
-  color: #000;
-}
-
 .logo:hover { 
   color: #B4CFB0;
   transition: .5s ease-in;
 }
 
-.nav-links.active a {
+.lang.active a,
+.nav-links.active a,
+.logo.active {  
   color: #000;
 }
 
