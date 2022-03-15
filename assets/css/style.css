@@ -115,9 +115,16 @@ li {
 header{
   width: 100%;
   border-top: 10px solid #000;
-  position: absolute;
+  position: fixed;
   background: rgb(8,8,8,0.7);
   z-index: 1;
+  transition: all .5s ease-in;
+}
+
+header.active {
+  position: fixed;
+  background-color: #FFF;
+  transition: all .5s ease-in;
 }
 
 .bg-black { 
@@ -242,9 +249,17 @@ header{
   font-size: 20px;
 }
 
+.logo.active {
+  color: #000;
+}
+
 .logo:hover { 
   color: #B4CFB0;
   transition: .5s ease-in;
+}
+
+.nav-links.active a {
+  color: #000;
 }
 
 .navbar { 
