@@ -1,26 +1,21 @@
 const hamburger = document.querySelector('.hamburger');
-const close_menu = document.querySelector('.close-menu');
 const nav_links = document.querySelector('.nav-links');
 const logo = document.querySelector('.logo');
 const lang = document.querySelector('.lang');
 
-hamburger.addEventListener('click',show);
-close_menu.addEventListener('click',close);
+hamburger.addEventListener('click', show);
 
 function show() {
-  nav_links.style.display = "flex";
-  nav_links.style.top = "45px";
-}
-
-function close() {
-  nav_links.style.top = "-140px";
+  hamburger.classList.toggle("active");
+  nav_links.classList.toggle("active");
+  document.body.classList.toggle("hidden")
 }
 
 const header = document.querySelector('header');
 
-window.onscroll =  function() {
+window.onscroll = function () {
   var top = window.scrollY;
-  if(top >= 200){
+  if (top >= 200) {
     header.classList.add('active');
     lang.classList.add('active');
     logo.classList.add('active');
