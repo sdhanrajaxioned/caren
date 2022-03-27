@@ -312,7 +312,7 @@ header.active {
 
 .banner .wrapper { width: 100%; }
 .banner-img { display: none; }
-.banner-img:first-child { display: block ;}
+.banner-img.active { display: block ;}
 .image-slider{ position: relative; }
 
 .arrow-left::after { 
