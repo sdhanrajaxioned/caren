@@ -28,3 +28,14 @@ window.onscroll = function () {
     nav_links.classList.remove('active');
   }
 }
+
+$(document).ready(function () {
+  $('.arrow-right').click(function () {
+    $('.image-slider').find('li.active').next().addClass('active');
+    $('.image-slider').find('li.active').prev().removeClass('active');
+  })
+  $('.arrow-left').click(function () {
+    $('.image-slider').find('li.active').prev().addClass('active');
+    $('.image-slider').find('li.active').next().removeClass('active');
+  })
+})
