@@ -365,7 +365,7 @@ header.active {
   transition: .5s ease-in;
 }
 
-.dot.active::after { color: #000;}
+.dots li.active .dot::after { color: #000;}
 /* Banner styling ends here */
 
 /* Image-galler styling starts here */
