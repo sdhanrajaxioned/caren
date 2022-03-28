@@ -32,7 +32,7 @@ window.onscroll = function () {
 $(document).ready(function () {
   $('.arrow-right').click(function () {
     $(this).prev().removeClass('hide');
-    $(this).addClass('active').prev().removeClass('active');
+    $(this).addClass('arrow-active').prev().removeClass('arrow-active');
 
     $('.image-slider').find('li.active').next().addClass('active');
     $('.image-slider').find('li.active').prev().removeClass('active');
@@ -48,7 +48,7 @@ $(document).ready(function () {
 
   $('.arrow-left').click(function () {
     $(this).next().removeClass('hide');
-    $(this).addClass('active').next().removeClass('active');
+    $(this).addClass('arrow-active').next().removeClass('arrow-active');
 
     $('.image-slider').find('li.active').prev().addClass('active');
     $('.image-slider').find('li.active').next().removeClass('active');
@@ -64,12 +64,13 @@ $(document).ready(function () {
 
   var dots = $('.dots li')
   var slides = $('.image-slider li')
-  // console.log(slides)
   dots.click(function () {
+    dots.parent().prevUntil('.image-slider').removeClass('arrow-active');
     var index = $(this).index();
     currentSlide = slides.eq(index);
     $(this).addClass('active').siblings().removeClass('active');
     currentSlide.addClass('active').siblings().removeClass('active');
+    
     if ($(this).index() === 0) {
       $(this).parent().siblings('.arrow-left').addClass('hide');
     }

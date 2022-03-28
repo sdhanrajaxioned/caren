@@ -349,8 +349,8 @@ header.active {
   transition: 0.5s ease-in;
 }
 
-.arrow-right.active::after,
-.arrow-left.active::after {
+.arrow-right.arrow-active::after,
+.arrow-left.arrow-active::after {
   color: #000;
 }
 
