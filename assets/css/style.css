@@ -338,10 +338,20 @@ header.active {
   text-indent: 0;
 }
 
+.arrow-left.hide,
+.arrow-right.hide {
+  display: none;
+}
+
 .arrow-left:hover::after,
 .arrow-right:hover::after {
   color: #000;
   transition: 0.5s ease-in;
+}
+
+.arrow-right.active::after,
+.arrow-left.active::after {
+  color: #000;
 }
 
 .dots { 

@@ -31,15 +31,56 @@ window.onscroll = function () {
 
 $(document).ready(function () {
   $('.arrow-right').click(function () {
+    $(this).prev().removeClass('hide');
+    $(this).addClass('active').prev().removeClass('active');
+
     $('.image-slider').find('li.active').next().addClass('active');
     $('.image-slider').find('li.active').prev().removeClass('active');
+
     $('.dots').find('li.active').next().addClass('active');
     $('.dots').find('li.active').prev().removeClass('active');
+
+    var last_image = $('.image-slider li').last();
+    if (last_image.hasClass('active')) {
+      $(this).addClass('hide');
+    }
   })
+
   $('.arrow-left').click(function () {
+    $(this).next().removeClass('hide');
+    $(this).addClass('active').next().removeClass('active');
+
     $('.image-slider').find('li.active').prev().addClass('active');
     $('.image-slider').find('li.active').next().removeClass('active');
+
     $('.dots').find('li.active').prev().addClass('active');
     $('.dots').find('li.active').next().removeClass('active');
+
+    var first_image = $('.image-slider li').first();
+    if (first_image.hasClass('active')) {
+      $(this).addClass('hide');
+    }
+  })
+
+  var dots = $('.dots li')
+  var slides = $('.image-slider li')
+  // console.log(slides)
+  dots.click(function () {
+    var index = $(this).index();
+    currentSlide = slides.eq(index);
+    $(this).addClass('active').siblings().removeClass('active');
+    currentSlide.addClass('active').siblings().removeClass('active');
+    if ($(this).index() === 0) {
+      $(this).parent().siblings('.arrow-left').addClass('hide');
+    }
+    else {
+      $(this).parent().siblings('.arrow-left').removeClass('hide');
+    }
+
+    if ($(this).index() === 3) {
+      $(this).parent().siblings('.arrow-right').addClass('hide');
+    } else {
+      $(this).parent().siblings('.arrow-right').removeClass('hide');
+    }
   })
 })
